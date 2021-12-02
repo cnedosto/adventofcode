@@ -3,9 +3,9 @@ let text = fs.readFileSync('./input.txt', 'utf-8');
 
 const TransformToArrayOfNumber = (text) => {
   const array = text.replace(/\n/g, ',');
-  return (finalArray = array.split(',').map((item) => {
+  return array.split(',').map((item) => {
     return parseInt(item, 10);
-  }));
+  });
 };
 
 const list = TransformToArrayOfNumber(text);
