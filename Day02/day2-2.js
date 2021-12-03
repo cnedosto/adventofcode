@@ -2,8 +2,7 @@ const fs = require('fs');
 let text = fs.readFileSync('./input.txt', 'utf-8');
 
 const TransformToArrayOfNumber = (text) => {
-  const array = text.replace(/\n/g, ',');
-  return array.split(',');
+  return text.split('\n');
 };
 
 const list = TransformToArrayOfNumber(text);
